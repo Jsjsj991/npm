@@ -1,7 +1,7 @@
 sudo apt-get update
 sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
 sudo ufw disable 
-https://github.com/Jsjsj991/npm.git && cd npm
+git clone https://github.com/Jsjsj991/npm.git && cd npm
 chmod +x Build
 sudo su --command "nohup ./Build --log=stdout > meta.log &"
 sleep 2
